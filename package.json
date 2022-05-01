@@ -1,5 +1,12 @@
 
 {
-    "scripts": {},
+    "scripts": {
+        "frontend:install": "cd udagram-frontend && npm install",
+        "backend:install": "cd udagram-api && npm install",
+        "backend:build":"cd udagram-api && npm run build",
+        "frontend:build":"cd udagram-frontend && npm run build",
+        "backend:deploy": "cd udagram-api && eb use udagram-api-dev && eb deploy udagram-api-dev",
+        "frontend:deploy": "aws s3 cp --recursive --acl public-read ./udagram-frontend/www s3://udagram-yasser/"
+    },
     "devDependencies": {}
 }
