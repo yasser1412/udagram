@@ -1,0 +1,41 @@
+version: 2.1
+orbs:
+  # orgs contain basc recipes and reproducible actions (install node, aws, etc.)
+  node: circleci/node@4.1.0
+  # different jobs are calles later in the workflows sections
+jobs:
+  build:
+    docker:
+      # the base image can run most needed actions with orbs
+      - image: "cimg/base:stable"
+    steps:
+      - node/install
+      - checkout
+
+      - run:
+          name: hello
+          command: |
+            echo "hello-world"
+      # install dependencies in both apps
+      - run:
+          name: install server dependencies
+          command: |
+            npm run backend:install
+      - run:
+          name: install UI dependencies
+          command: |
+            npm run frontend:install
+      # build both apps
+      - run:
+          name: Build server
+          command: npm run backend:build
+      - run:
+          name: Build UI
+          command: npm run frontend:build
+      # deploy both apps
+      - run:
+          name: deploy server
+          command: npm run backend:deploy
+      - run:
+          name: deploy UI
+          command: npm run frontend:deploy
