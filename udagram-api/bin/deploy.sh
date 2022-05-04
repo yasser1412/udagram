@@ -1,5 +1,5 @@
-eb use udagram-api
-eb deploy udagram-api
+eb use udagram-api-dev
+eb deploy udagram-api-dev
 
 eb setenv AWS_PROFILE=$AWS_DEFAULT_PROFILE
 eb setenv AWS_BUCKET=$AWS_BUCKET
