@@ -46,11 +46,11 @@ This project contains two different test suite: unit tests and End-To-End tests(
 
 There are no Unit test on the back-end
 
-### Unit Tests
+### Unit Tests:
 
 Unit tests are using the Jasmine Framework.
 
-### End to End Tests
+### End to End Tests:
 
 The e2e tests are using Protractor and Jasmine.
 
@@ -63,3 +63,4 @@ The e2e tests are using Protractor and Jasmine.
 ## License
 
 [License](LICENSE.txt)
+# udagram-udacity-master
