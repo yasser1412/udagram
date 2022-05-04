@@ -11,4 +11,5 @@
     "frontend:e2e": "cd udagram-frontend && npm run e2e",
     "frontend:karmaCli": "cd udagram-frontend && npm run karmaCli"
   }
+  
 }
