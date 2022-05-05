@@ -5,6 +5,7 @@ orbs:
   eb: circleci/aws-elastic-beanstalk@2.0.1
 jobs:
   build:
+
     docker:
       - image: "cimg/base:stable"
     steps:
@@ -36,3 +37,12 @@ jobs:
           name: Deploy Back-End
           command: |
             npm run backend:deploy
+
+workflows:
+  deployment:
+    jobs:
+    # Build & Deploy project on Main Branch
+      - Build-Deploy:
+         filters:
+            branches:
+              only: main
