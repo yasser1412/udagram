@@ -5,7 +5,7 @@ udagram-frontend is an Angular/Ionic application hosted in an S3 bucket by Amazo
 udagram-api is an Express/NodeJs application hosted by an Elastic Beanstalk environment by Amazon Web Services.
 PostgreSQL database hosted by RDS service by Amazon Web Services.
 
-![infrastructure Digram](infrastructure.jpg)
+![infrastructure Digram](Screenshots/infrastructure.jpg)
 
 ## AWS Cloud Setup
 
